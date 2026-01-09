@@ -7,10 +7,9 @@ import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
 // EmailJS Configuration
-// Replace these with your EmailJS credentials from https://www.emailjs.com/
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_3neci0j';
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'service_3neci0j';
+const EMAILJS_TEMPLATE_ID = 'template_egqm9zq';
+const EMAILJS_PUBLIC_KEY = 'jYrQgy0twyzKrucJq';
 
 // Recipient emails
 const RECIPIENT_EMAILS = 'pallab@bristontech.com,support@driveiq.io,raj@bristontech.com';
@@ -55,6 +54,7 @@ const ContactSection = () => {
         description: "We'll get back to you within 24 hours.",
       });
       
+      // Reset form after successful submission
       setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } catch (error) {
       console.error('EmailJS Error:', error);
@@ -174,7 +174,7 @@ const ContactSection = () => {
                 ) : (
                   <>
                     Submit Enquiry
-                    <Send className="w-5 h-5" />
+                    <Send className="w-5 h-5 ml-2" />
                   </>
                 )}
               </Button>
@@ -235,7 +235,7 @@ const ContactSection = () => {
                     <div className="icon-circle w-10 h-10">
                       <Mail className="w-5 h-5 text-gold-500" />
                     </div>
-                    <span>support@driveiq.com</span>
+                    <span>support@driveiq.io</span>
                   </a>
                 </div>
 
