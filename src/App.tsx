@@ -8,6 +8,7 @@ import About from "./pages/About";
 import FuelManagement from "./pages/FuelManagement";
 import FleetManagement from "./pages/FleetManagement";
 import SafetyResponse from "./pages/SafetyResponse";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/fuel-management" element={<FuelManagement />} />
           <Route path="/fleet-management" element={<FleetManagement />} />
           <Route path="/safety-response" element={<SafetyResponse />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

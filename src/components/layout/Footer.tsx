@@ -108,9 +108,9 @@ const Footer = () => {
             © {new Date().getFullYear()} DriveIQ. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="/" className="text-navy-400 hover:text-gold-400 text-sm transition-colors">
+            <Link to="/privacy-policy" className="text-navy-400 hover:text-gold-400 text-sm transition-colors">
               Privacy Policy
-            </a>
+            </Link>
             <a href="/" className="text-navy-400 hover:text-gold-400 text-sm transition-colors">
               Terms of Service
             </a>
