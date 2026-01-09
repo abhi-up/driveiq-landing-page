@@ -4,6 +4,16 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration
+// Replace these with your EmailJS credentials from https://www.emailjs.com/
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_3neci0j';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+
+// Recipient emails
+const RECIPIENT_EMAILS = 'pallab@bristontech.com,support@driveiq.io,raj@bristontech.com';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -20,16 +30,42 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Enquiry Submitted!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-    setIsSubmitting(false);
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        to_email: RECIPIENT_EMAILS,
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.company || 'Not provided',
+        message: formData.message,
+        reply_to: formData.email,
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+      
+      toast({
+        title: "Enquiry Submitted!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send your enquiry. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -159,11 +195,11 @@ const ContactSection = () => {
                     Sales & Corporate Enquiries
                   </h4>
                   <div className="space-y-3">
-                    <a href="tel:+919650391206" className="flex items-center gap-3 text-foreground hover:text-gold-500 transition-colors">
+                    <a href="tel:+918920023493" className="flex items-center gap-3 text-foreground hover:text-gold-500 transition-colors">
                       <div className="icon-circle w-10 h-10">
                         <Phone className="w-5 h-5 text-gold-500" />
                       </div>
-                      <span>+91-9650391206</span>
+                      <span>+91-8920023493 </span>
                     </a>
                     <a href="tel:+918800018010" className="flex items-center gap-3 text-foreground hover:text-gold-500 transition-colors">
                       <div className="icon-circle w-10 h-10">
