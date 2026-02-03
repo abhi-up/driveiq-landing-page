@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Linkedin} from 'lucide-react';
+import { Link } from "react-router-dom"
+import { Phone, Mail, MapPin, Linkedin } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -9,13 +9,20 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-primary-foreground">DriveIQ</span>
+              <span className="text-xl font-bold text-primary-foreground">
+                DriveIQ
+              </span>
             </Link>
             <p className="text-navy-300 text-sm leading-relaxed">
-              DriveIQ is a next-generation intelligent platform combining IoT-based Fuel & Asset Management, Fleet Telematics, and On-Demand Safety & Emergency Response.
+              DriveIQ is a next-generation intelligent platform combining
+              IoT-based Fuel & Asset Management, Fleet Telematics, and On-Demand
+              Safety & Emergency Response.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/company/driveiqprivatelimited/" className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-400 hover:text-navy-900 transition-all">
+              <a
+                href="https://www.linkedin.com/company/driveiqprivatelimited/"
+                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-400 hover:text-navy-900 transition-all"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -23,20 +30,31 @@ const Footer = () => {
 
           {/* Solutions */}
           <div>
-            <h4 className="text-lg font-semibold text-primary-foreground mb-6">Solutions</h4>
+            <h4 className="text-lg font-semibold text-primary-foreground mb-6">
+              Solutions
+            </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/fuel-management" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <Link
+                  to="/fuel-management"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   Fuel Management System
                 </Link>
               </li>
               <li>
-                <Link to="/fleet-management" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <Link
+                  to="/fleet-management"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   Fleet Management System
                 </Link>
               </li>
               <li>
-                <Link to="/safety-response" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <Link
+                  to="/safety-response"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   Safety & Emergency Response
                 </Link>
               </li>
@@ -45,25 +63,39 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-primary-foreground mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-primary-foreground mb-6">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <Link
+                  to="/"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <Link
+                  to="/about"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <a href="/#clients" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <a
+                  href="/#clients"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   Clients
                 </a>
               </li>
               <li>
-                <a href="/#contact" className="text-navy-300 hover:text-gold-400 text-sm transition-colors">
+                <a
+                  href="/#contact"
+                  className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -72,7 +104,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-primary-foreground mb-6">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-primary-foreground mb-6">
+              Contact Us
+            </h4>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <Phone className="w-5 h-5 text-gold-400 flex-shrink-0" />
@@ -90,12 +124,16 @@ const Footer = () => {
               </li>
               <li className="flex gap-3">
                 <Mail className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                <p className="text-primary-foreground text-sm">support@driveiq.com</p>
+                <p className="text-primary-foreground text-sm">
+                  support@driveiq.com
+                </p>
               </li>
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-gold-400 flex-shrink-0" />
                 <p className="text-navy-300 text-sm">
-                  5, Jangpura A, Mathura Road,<br />New Delhi – 110014
+                  5, Jangpura A, Mathura Road,
+                  <br />
+                  New Delhi – 110014
                 </p>
               </li>
             </ul>
@@ -107,18 +145,39 @@ const Footer = () => {
           <p className="text-navy-400 text-sm">
             © {new Date().getFullYear()} DriveIQ. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <Link to="/privacy-policy" className="text-navy-400 hover:text-gold-400 text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="text-navy-400 hover:text-gold-400 text-sm transition-colors">
-              Terms of Service
-            </Link>
+
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <a
+              href="https://twenty4ventures.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+            >
+              Powered by{" "}
+              <span className="text-gold-400 font-medium">
+                Twenty 4 Ventures
+              </span>
+            </a>
+
+            <div className="flex gap-6">
+              <Link
+                to="/privacy-policy"
+                className="text-navy-400 hover:text-gold-400 text-sm transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/terms-of-service"
+                className="text-navy-400 hover:text-gold-400 text-sm transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
