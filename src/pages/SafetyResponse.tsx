@@ -407,34 +407,34 @@ const SafetyResponse = () => {
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="bg-gradient-to-r from-navy-800 to-navy-900 rounded-3xl p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-                Download the 24 Response App
-              </h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+                    Download the 24 Response App
+                  </h2>
               <p className="text-lg text-navy-200 mb-8 max-w-2xl mx-auto">
                 Get instant access to emergency services, track your loved ones,
                 and stay safe with our mobile app. Available on iOS & Android.
-              </p>
+                  </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="gold" size="xl" asChild>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.luckey.onetouch1&hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Download Android App
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-                </Button>
-                <Button variant="outline-light" size="xl" asChild>
-                  <a
-                    href="https://itunes.apple.com/in/app/one-touch-response/id987064767?mt=8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Download iOS App
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-                </Button>
+                    <Button variant="gold" size="xl" asChild>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.luckey.onetouch1&hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Download Android App
+                        <ArrowRight className="w-5 h-5" />
+                      </a>
+                    </Button>
+                    <Button variant="outline-light" size="xl" asChild>
+                      <a
+                        href="https://itunes.apple.com/in/app/one-touch-response/id987064767?mt=8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Download iOS App
+                        <ArrowRight className="w-5 h-5" />
+                      </a>
+                    </Button>
               </div>
             </div>
           </div>

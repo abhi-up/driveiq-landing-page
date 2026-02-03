@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Play, Shield, Truck, Fuel } from 'lucide-react';
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Play, Shield, Truck, Fuel } from "lucide-react"
+import driveiq from "../../assets/driveiq.png"
 
 const HeroSection = () => {
   return (
@@ -19,29 +20,40 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-navy-500/30">
               <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
-              <span className="text-sm font-bold text-gradient-gold">Next-Generation IoT Platform</span>
+              <span className="text-sm font-bold text-gradient-gold">
+                Next-Generation IoT Platform
+              </span>
+            </div>
+
+            <div className="">
+              <img
+                src={driveiq}
+                alt="DriveIQ Logo"
+                width={320}
+                height={80}
+                className="object-contain"
+              />
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-              DriveIQ
               <span className="block text-gradient-gold mt-2 pb-4">
-                Intelligent IoT, Fleet & Safety Solutions
+                Mobility Intelligence Delivered
               </span>
             </h1>
 
             <p className="text-lg text-primary leading-relaxed max-w-xl">
-              DriveIQ is a next-gen intelligent platform that combines IoT-based Fuel & Asset Management, Fleet Telematics, and On-Demand Safety & Emergency Response into one unified ecosystem.
+              DriveIQ is an advanced intelligent platform that unifies IoT-based
+              Fuel & Asset Management, Fleet Telematics, and On-Demand Safety &
+              Emergency Response into a single, seamless ecosystem.
             </p>
 
             <div className="flex flex-wrap gap-4">
-               <a href="#contact">
-
-              <Button variant="gold" size="xl" className="group">
-                Request Demo Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-               </a>
-              
+              <a href="#contact">
+                <Button variant="gold" size="xl" className="group">
+                  Request Demo Now
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
 
             {/* Quick Stats */}
@@ -65,36 +77,57 @@ const HeroSection = () => {
           <div className="relative hidden lg:block">
             <div className="grid grid-cols-2 gap-4">
               {/* Floating Card 1 */}
-              <div className="card-elevated p-6 animate-float" style={{ animationDelay: '0s' }}>
+              <div
+                className="card-elevated p-6 animate-float"
+                style={{ animationDelay: "0s" }}
+              >
                 <div className="icon-circle mb-4">
                   <Fuel className="w-6 h-6 text-gold-500" />
                 </div>
-                <h3 className="font-semibold text-primary mb-2">Fuel Intelligence</h3>
-                <p className="text-sm text-muted-foreground">Real-time monitoring & theft detection</p>
+                <h3 className="font-semibold text-primary mb-2">
+                  Fuel Intelligence
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Real-time monitoring & theft detection
+                </p>
               </div>
 
               {/* Floating Card 2 */}
-              <div className="card-elevated p-6 mt-12 animate-float" style={{ animationDelay: '2s' }}>
+              <div
+                className="card-elevated p-6 mt-12 animate-float"
+                style={{ animationDelay: "2s" }}
+              >
                 <div className="icon-circle mb-4">
                   <Truck className="w-6 h-6 text-gold-500" />
                 </div>
-                <h3 className="font-semibold text-primary mb-2">Fleet Analytics</h3>
-                <p className="text-sm text-muted-foreground">GPS tracking & route optimization</p>
+                <h3 className="font-semibold text-primary mb-2">
+                  Fleet Analytics
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  GPS tracking & route optimization
+                </p>
               </div>
 
               {/* Floating Card 3 */}
-              <div className="card-elevated p-6 animate-float" style={{ animationDelay: '4s' }}>
+              <div
+                className="card-elevated p-6 animate-float"
+                style={{ animationDelay: "4s" }}
+              >
                 <div className="icon-circle mb-4">
                   <Shield className="w-6 h-6 text-gold-500" />
                 </div>
                 <h3 className="font-semibold text-primary mb-2">24x7 Safety</h3>
-                <p className="text-sm text-muted-foreground">Emergency response on demand</p>
+                <p className="text-sm text-muted-foreground">
+                  Emergency response on demand
+                </p>
               </div>
 
               {/* Stats Card */}
               <div className="bg-gold-400 rounded-xl p-6 mt-12">
                 <p className="text-4xl font-bold text-navy-900">5,000+</p>
-                <p className="text-sm font-medium text-navy-700">KL Fuel Managed</p>
+                <p className="text-sm font-medium text-navy-700">
+                  KL Fuel Managed
+                </p>
               </div>
             </div>
           </div>
@@ -108,7 +141,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
