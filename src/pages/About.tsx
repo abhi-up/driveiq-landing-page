@@ -129,7 +129,7 @@ const About = () => {
         </section>
 
         {/* Powered By Section */}
-        <section className="section-padding bg-navy-50">
+        <section className="section-padding bg-navy-50 display:none">
           <div className="container-section">
             <div className="grid md:grid-cols-2 items-center gap-12">
               {/* Logo */}
