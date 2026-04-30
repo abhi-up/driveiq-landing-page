@@ -1,7 +1,7 @@
 import { Calendar, Users, Fuel, Cpu, MapPin, AlertCircle, UserCheck, Footprints } from 'lucide-react';
 
 const stats = [
-  { icon: Calendar, value: '2015', label: 'Founded' },
+  { icon: Calendar, value: '2025', label: 'Founded' },
   { icon: Users, value: '100+', label: 'Clients Served' },
   { icon: Fuel, value: '5,000+', label: 'KL Fuel Managed' },
   { icon: Cpu, value: '3,000+', label: 'Units Installed' },
