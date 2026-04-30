@@ -151,7 +151,7 @@ const Footer = () => {
               href="https://twenty4ventures.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy-300 hover:text-gold-400 text-sm transition-colors"
+              className="hidden text-navy-300 hover:text-gold-400 text-sm transition-colors"
             >
               Powered by{" "}
               <span className="text-gold-400 font-medium">
